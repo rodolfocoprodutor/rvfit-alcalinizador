@@ -1,0 +1,223 @@
+/* Variables css*/
+:root{
+    /* Colors */
+    /* Color mode HSL(hue, saturation, lightness)*/
+    /*
+        blue    :   hsl(224, 69%, 14%)
+        red     :   hsl(0, 100%, 43%)
+        gray    :   hsl(0, 0%, 98%)
+        green   :   hsl(100, 83%, 41%)
+        yellow  :   HSL(52, 100%, 50%)
+    */
+
+    --hue: 7;
+    --sat: 100%;
+    --lig: 66%;
+
+    --brand-color1: hsl(var(--hue), var(--sat), var(--lig)) ;
+    --brand-color2: hsl(339, 93%, 59%);
+    --title-color: hsl(0, 7%, 3%);
+    --text-color: hsl(234, 14%, 14%);
+    --bg-gradient: linear-gradient(105.88deg, #FF6651 0%, #F8377B 100%);
+    --container-color: #fff;
+    --attention-yellow: hsl(50, 100%, 50%);
+    --attention-red: hsl(358, 85%, 52%);
+    --attention-green: hsl(100, 83%, 41%);
+
+    /* Font and typography */
+    /* .5rem = 8px / 1rem = 16px */
+    --body-font: 'Poppins', sans-serif;/*
+    --header: 4.0rem;
+    --title: 3.4rem;
+    --subtitle: 2.4rem;
+    --body-text: 2.0rem;
+    --details: 1.8rem;
+    --smallest: 1.6rem;
+
+    /* Title center*/
+
+}
+
+/* Responsive typography *//*
+@media only screen and (orientation: portrait)  {
+    :root {
+        --header: 2.8rem;
+        --title: 2rem;
+        --subtitle: 2rem;
+        --body-text: 1.6rem;
+        --details: 1.4rem;
+        --smallest: 1.2rem;
+    
+    }
+}*/
+*,
+*::after,
+*::before{
+    list-style:none;
+    text-decoration:none;
+    margin:0;
+    padding:0;
+    text-align:left;
+    border:0;
+    outline-color:#ccc;
+    color: var(--text-color);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    font-family: var(--body-font);
+    font-display: swap;
+}
+html{
+    scroll-behavior: smooth;
+    direction: ltr;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+}
+/*
+h1{
+    font-size: var(--header);
+    font-weight: 700;
+    line-height: 120%;
+}
+h2{
+    font-size: var(--title);
+    font-weight: 900;
+    text-transform: uppercase;
+    color: inherit;
+}
+h3{
+    font-size: var(--subtitle);
+}
+li,p,a{
+    font-size: var(--body-text);
+    font-weight: 500;
+}
+*/
+body{
+    counter-reset: num;
+}
+p{
+    color: var(--text-color);
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+button {
+    width: max-content;
+    height: 4rem;
+    padding: 0 2rem;
+    color: #FFFFFF;
+    border-radius: 0.8rem;
+    font-size: var(--body-text);
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: blue;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: background-color .4s ease;
+    transition: box-shadow .4s ease;
+    box-shadow: 0px 1.25rem 40px -11px blue;
+}
+button:hover {
+    background-color: bluee;
+    box-shadow: 0px 1.25rem 40px -11px skyblue;
+    color: #ffffff;
+}
+
+.container{
+    display: grid;
+    width: min(100% - 10%, 1216px);
+    margin-inline: auto;
+    gap: 2rem;
+}
+header{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-image: var(--bg-gradient);
+}
+header .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+header .container .banner-hero__info{
+    display: grid;
+    gap: 2rem;
+    background-image: url('../assets/img/cicles.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 2rem;
+}
+header .container .banner-hero__img{
+    padding: 2rem;
+}
+header .container .banner-hero__img img{
+    width: 335px;
+}
+header .container .banner-hero__info h1{
+    color: #FFFFFF;
+}
+header .container .banner-hero__info p{
+    color: #FFFFFF;
+}
+
+.s-video{
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+.s-video .container{
+    align-items: center;
+    justify-items: center;
+}
+.s-video .container video{
+    max-width: 90%;
+    border-radius: .6rem;
+}
+
+.s-benefits{
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+.s-benefits .container{
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+.s-benefits .container .benefits__info{
+    display: grid;
+    gap: 1rem;
+    align-content: baseline;
+}
+.s-benefits .container .benefits__article{
+    display: grid;
+    gap: 2rem;
+}
+.s-benefits .container .benefits__article h3::before{
+    content: counter(num);
+    counter-increment: num;
+    background-image: var(--bg-gradient);
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    border-radius: 16rem;
+    font-size: 3rem;
+    text-align: center;
+    color: #FFFFFF;
+    margin-right: 1rem;
+}
+
+.s-quem-usa{
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+}
+.s-quem-usa .container{
+    align-items: center;
+    justify-items: center;
+}
+.s-quem-usa .container .users{
+    display: grid;
+    width: 100%;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
