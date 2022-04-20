@@ -171,24 +171,12 @@ header .container .banner-hero__info p{
     color: #FFFFFF;
 }
 
-.s-video{
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-}
-.s-video .container{
-    align-items: center;
-    justify-items: center;
-}
 .s-video .container video{
     width: 100%;
     max-width: 640px;
     border-radius: .6rem;
 }
 
-.s-benefits{
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-}
 .s-benefits .container{
     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
@@ -215,14 +203,6 @@ header .container .banner-hero__info p{
     margin-right: 1rem;
 }
 
-.s-quem-usa{
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-}
-.s-quem-usa .container{
-    align-items: center;
-    justify-items: center;
-}
 .s-quem-usa .container .users{
     display: grid;
     width: 100%;
@@ -235,13 +215,7 @@ header .container .banner-hero__info p{
     object-fit: contain;
 }
 
-.s-technical-features{
-    padding-top: 4rem;
-    padding-bottom: 6rem; 
-}
 .s-technical-features .container{
-    align-items: center;
-    justify-items: center;
     gap: 6rem;
 }
 .s-technical-features .container .content__banner{
@@ -387,4 +361,71 @@ header .container .banner-hero__info p{
     font-weight: 400;
     text-align: center;
     max-width: 80vw;
+}
+
+.s-faq .container .content__faq{
+    width: 100%;
+    max-width: 960px;
+}
+.s-faq .container h2{
+    color: var(--brand-color2);
+}
+.s-faq .container h2::before{
+    content: 'contact_support';
+    color: var(--brand-color2);
+    font-family: 'Material Icons';
+    font-size: 4rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+.s-faq .container .content__faq details{
+    margin-bottom: 1rem;
+}
+.s-faq .container .content__faq details p{
+    padding: 1rem 2rem;
+}
+.s-faq .container .content__faq summary{
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: .6rem;
+    background-image: var(--bg-gradient);
+    font-size: ;
+    font-weight: 600;
+    line-height: 2.5rem;
+    box-shadow: 0px .6rem 20px -11px var(--brand-color2);
+}
+
+.s-faq .container .content__faq summary::before{
+    content: 'help';
+    color: #ffffff;
+    font-family: 'Material Icons';
+    font-size: 2rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+.s-suport .container p{
+    text-align: center;
+}
+.s-suport .container button{
+    background-image: var(--bg-gradient);
+    box-shadow: 0px 1.25rem 40px -11px var(--brand-color2);
+}
+footer{
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    background-image: var(--bg-gradient);
+}
+footer hr{
+    color: #FFFFFF;
+}
+footer .container p{
+    white-space: pre-line;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+}
+footer .container a{
+    color: #FFFFFF;
+    font-weight: 600;
+    text-decoration: underline;
 }
