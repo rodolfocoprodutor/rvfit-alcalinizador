@@ -272,6 +272,7 @@ header .container .banner-hero__info p{
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
+    justify-items: center;
 }
 .s-recommends .container .content_recommends_users video{
     width:100%;
@@ -280,7 +281,7 @@ header .container .banner-hero__info p{
     object-fit: contain;
     border-radius: 1rem;
 }
-.s-recommends .container .content_text p{
+.s-recommends .container .content_title h2{
     text-align: center;
 }
 
