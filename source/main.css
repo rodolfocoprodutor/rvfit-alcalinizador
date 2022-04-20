@@ -155,7 +155,9 @@ header .container .banner-hero__img{
     padding: 2rem;
 }
 header .container .banner-hero__img img{
-    width: 335px;
+    width: 100%;
+    height: 460px;
+    object-fit: contain;
 }
 header .container .banner-hero__info h1{
     color: #FFFFFF;
@@ -173,7 +175,8 @@ header .container .banner-hero__info p{
     justify-items: center;
 }
 .s-video .container video{
-    max-width: 90%;
+    width: 100%;
+    max-width: 640px;
     border-radius: .6rem;
 }
 
@@ -219,5 +222,68 @@ header .container .banner-hero__info p{
     display: grid;
     width: 100%;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.s-quem-usa .container .users img{
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+}
+
+.s-technical-features{
+    padding-top: 4rem;
+    padding-bottom: 6rem; 
+}
+.s-technical-features .container{
+    align-items: center;
+    justify-items: center;
+    gap: 6rem;
+}
+.s-technical-features .container .content__banner{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.s-technical-features .container .content__banner img{
+    width: 100%;
+    height: 360px;
+    object-fit: contain;
+}
+.s-technical-features .container .content__banner .content_text{
+    font-weight: 500;
+    display: grid;
+    gap:1rem;
+}
+.s-technical-features .container .content__banner .content_text h2,h3,p{
+    font-weight: 500;
+}
+.s-technical-features .container .content_features{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2rem;
+}
+.s-technical-features .container .content_features .features{
+    padding: 2rem 1rem;
+    border-radius: .8rem;
+    box-shadow: 0px 1.25rem 40px -11px var(--brand-color2);
+    background-image: var(--bg-gradient);
+}
+.s-technical-features .container .content_features .features h3{
+    font-size: 140%;
+    color: #FFFFFF;
+}
+.s-technical-features .container .content_features .features h3::before{
+    content: counter(num);
+    counter-increment: num;
+    font-weight: 700;
+    font-size: 140%;
+    color: #FFFFFF;
+    margin-right: .8rem;
+}
+.s-technical-features .container .content_features .features p{
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 90%;
 }
