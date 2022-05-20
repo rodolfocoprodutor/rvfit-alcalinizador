@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 /* Variables css*/
 :root{
     /* Colors */
@@ -82,12 +85,8 @@ h3{
     color: var(--title-color);
 }
 h4{
-    font-size: var(--subtitle-h4);
-    background: linear-gradient(105.88deg, #FF6651 0%, #F8377B 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+    font-size: var(--title);
+    color: var(--title-color);
 }
 p{ 
     font-size: var(--body-text);
