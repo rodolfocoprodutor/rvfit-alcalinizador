@@ -94,6 +94,9 @@ p{
 b{
     font-size: inherit;
 }
+a,span{
+    display:block
+}
 li{
     font-size: var(--body-text);
 }
@@ -101,11 +104,13 @@ summary{
     font-size: var(--body-text);
     font-weight: 600;
 }
+
 body{
     counter-reset: num;
 }
 
 img{
+    display:block;
     width: 100%;
     height: auto;
 }
@@ -161,8 +166,8 @@ button:hover {
     text-align: center;
 }
 section{
-    padding-top: 4rem;
-    padding-bottom: 6rem;
+    padding-top: 7.2rem;
+    padding-bottom: 7.2rem;
 }
 .container{
     display: grid;
@@ -199,9 +204,13 @@ header .container img{
     max-width: 640px;
     border-radius: .6rem;
 }
+.s-video .container .title{
+    width: 100%;
+    max-width: 64rem;
+}
 
 .s-benefits .container{
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
     gap: 4rem;
 }
 .s-benefits .container .benefits__info{
@@ -209,9 +218,12 @@ header .container img{
     gap: 1rem;
     align-content: baseline;
     width: 100%;
+    max-width: 41.4rem;
     height: 100%;
 }
 .s-benefits .container .benefits__article{
+    width: 100%;
+    max-width: 69.6rem;
     display: grid;
     gap: 2rem;
 }
@@ -237,6 +249,10 @@ header .container img{
     display: block;
     max-height: 512px;
     max-width: max-content;
+}
+.s-tech .container .subtitle{
+    width: 100%;
+    max-width: 96rem;
 }
 
 .s-recomend{
@@ -340,7 +356,7 @@ header .container img{
 .s-offer .container .content_product img{
     object-fit: contain;
     max-width: max-content;
-    height: 281px;
+    max-height: 281px;
 }
 
 .s-faq .container .content__faq{
@@ -404,7 +420,7 @@ footer .whatsapp img{
 }
 footer {
     background: var(--bg-gradient);
-    padding-top: 6.4rem;
+    padding-top: 7.2rem;
     padding-bottom: 3.2rem;
 }
 footer p{
