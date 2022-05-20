@@ -16,40 +16,40 @@
 
     --brand-color1: hsl(var(--hue), var(--sat), var(--lig)) ;
     --brand-color2: hsl(339, 93%, 59%);
-    --title-color: hsl(0, 7%, 3%);
-    --text-color: hsl(234, 14%, 14%);
+    --title-color: hsl(212, 94%, 7%);
+    --text-color: hsl(212, 21%, 33%);
     --bg-gradient: linear-gradient(105.88deg, #FF6651 0%, #F8377B 100%);
     --container-color: #fff;
-    --attention-yellow: hsl(50, 100%, 50%);
+    --attention-yellow: hsl(45, 100%, 48%);
     --attention-red: hsl(358, 85%, 52%);
     --attention-green: hsl(100, 83%, 41%);
 
     /* Font and typography */
     /* .5rem = 8px / 1rem = 16px */
-    --body-font: 'Poppins', sans-serif;/*
-    --header: 4.0rem;
-    --title: 3.4rem;
-    --subtitle: 2.4rem;
-    --body-text: 2.0rem;
-    --details: 1.8rem;
-    --smallest: 1.6rem;
+    --body-font: 'Poppins', sans-serif;
+    --header: 5.8rem;
+    --title: 3.8rem;
+    --subtitle: 2.9rem;
+    --subtitle-h4: 2.2rem;
+    --body-text: 1.9rem;
+    --details: 1.6rem;
+    --smallest: 1.2rem;
 
     /* Title center*/
 
 }
 
-/* Responsive typography *//*
+/* Responsive typography */
 @media only screen and (orientation: portrait)  {
     :root {
-        --header: 2.8rem;
-        --title: 2rem;
-        --subtitle: 2rem;
+        --header: 4.8rem;
+        --title: 3.2rem;
+        --subtitle: 1.9rem;
         --body-text: 1.6rem;
-        --details: 1.4rem;
-        --smallest: 1.2rem;
-    
+        --details: 1.2rem;
+        --smallest: 1.0rem;
     }
-}*/
+}
 *,
 *::after,
 *::before{
@@ -67,46 +67,68 @@
     box-sizing:border-box;
     font-family: var(--body-font);
     font-display: swap;
+    font-size: 62.5%;
 }
 html{
     scroll-behavior: smooth;
     direction: ltr;
-    font-size: clamp(1rem, 1vw, 1.2rem);
-}
-/*
-h1{
-    font-size: var(--header);
-    font-weight: 700;
-    line-height: 120%;
 }
 h2{
     font-size: var(--title);
-    font-weight: 900;
-    text-transform: uppercase;
-    color: inherit;
+    color: var(--title-color);
 }
 h3{
     font-size: var(--subtitle);
+    color: var(--title-color);
 }
-li,p,a{
+h4{
+    font-size: var(--subtitle-h4);
+    background: linear-gradient(105.88deg, #FF6651 0%, #F8377B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+p{ 
     font-size: var(--body-text);
-    font-weight: 500;
 }
-*/
+b{
+    font-size: inherit;
+}
+li{
+    font-size: var(--body-text);
+}
+summary{
+    font-size: var(--body-text);
+    font-weight: 600;
+}
 body{
     counter-reset: num;
 }
-p{
-    color: var(--text-color);
-}
+
 img{
     width: 100%;
     height: auto;
 }
-
+mark {
+    font-size: inherit;
+    background-color: yellow;
+    color: initial;
+ }
+.gradient {
+    font-size: inherit;
+    background: linear-gradient(105.88deg, #FF6651 0%, #F8377B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.t-center{
+    text-align: center;
+}
 button {
     width: max-content;
-    height: 4rem;
+    height: 6.4rem;
     padding: 0 2rem;
     color: #FFFFFF;
     border-radius: 0.8rem;
@@ -127,48 +149,50 @@ button:hover {
     box-shadow: 0px 1.25rem 40px -11px skyblue;
     color: #ffffff;
 }
+:is(.s-tech, .s-offer, footer) h2 {
+    color:white;
+    text-align: center;
+}
+:is(.s-tech, .s-offer, footer) h3 {
+    color:white;
+    text-align: center;
+}
+:is(.s-tech, .s-offer, footer) p {
+    color:white;
+    text-align: center;
+}
 section{
     padding-top: 4rem;
     padding-bottom: 6rem;
 }
 .container{
     display: grid;
-    width: min(100% - 10%, 1216px);
+    width: min(100% - 10%, 1217px);
     margin-inline: auto;
     gap: 2rem;
     align-items: center;
     justify-items: center;
 }
+
 header{
-    padding-top: 2rem;
-    padding-bottom: 4rem;
+    display: grid;
+    justify-content: center;
+    padding-top: 2.4rem;
     background-image: var(--bg-gradient);
 }
 header .container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-}
-header .container .banner-hero__info{
-    display: grid;
-    gap: 2rem;
-    background-image: url('../assets/img/cicles.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 2rem;
-}
-header .container .banner-hero__img{
-    padding: 2rem;
-}
-header .container .banner-hero__img img{
     width: 100%;
-    height: 460px;
-    object-fit: contain;
 }
-header .container .banner-hero__info h1{
-    color: #FFFFFF;
+header .container img{
+    max-width: max-content;
+    max-height: 100vh;
+    object-fit: contain; 
 }
-header .container .banner-hero__info p{
-    color: #FFFFFF;
+.s-selos{
+    background-color: #F9F9F9;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+    border-top: solid .6rem var(--attention-yellow);
 }
 
 .s-video .container video{
@@ -178,12 +202,15 @@ header .container .banner-hero__info p{
 }
 
 .s-benefits .container{
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 4rem;
 }
 .s-benefits .container .benefits__info{
     display: grid;
     gap: 1rem;
     align-content: baseline;
+    width: 100%;
+    height: 100%;
 }
 .s-benefits .container .benefits__article{
     display: grid;
@@ -193,26 +220,68 @@ header .container .banner-hero__info p{
     content: counter(num);
     counter-increment: num;
     background-image: var(--bg-gradient);
-    width: 64px;
-    height: 64px;
-    display: inline-block;
+    width: 4.0rem;
+    height: 4.0rem;
+    display: inline-flex;
     border-radius: 16rem;
     font-size: 3rem;
     text-align: center;
     color: #FFFFFF;
     margin-right: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.s-tech{
+    background: var(--bg-gradient);
+}
+.s-tech .container img{
+    display: block;
+    max-height: 512px;
+    max-width: max-content;
 }
 
-.s-quem-usa .container .users{
-    display: grid;
-    width: 100%;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.s-recomend{
+    background-image: url('../assets/bg-recomenda.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
 }
-.s-quem-usa .container .users img{
-    width: 100%;
-    height: 600px;
+.s-recomend .container h2{ 
+    text-align: center;
+}
+.s-recomend .container h3{ 
+    text-align: center;
+}
+.s-recomend .container p{ 
+    text-align: center;
+}
+.s-recomend .container .content_recomend{ 
+        align-content: center;
+        background: transparent;
+        padding: 0; 
+        display: grid;
+        overflow: hidden;
+}
+.s-recomend .container .content_recomend figure {
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    border-radius: .8rem;
+}
+.s-recomend .container .content_recomend img {
+    scroll-snap-align: start; 
+    border-radius: .6rem;
+    margin-bottom: 15px;
+    width: max-content;
     object-fit: contain;
+    height: 512px;
+    margin-right: .8rem;
+}
+.s-recomend .container .content_recomend figure {
+    align-content: center;
+    border:none;
+    background-color: transparent;
+    display: grid;
+    grid: auto / repeat(7, auto);
+    grid-gap: 1em;
 }
 
 .s-technical-features .container{
@@ -220,7 +289,7 @@ header .container .banner-hero__info p{
 }
 .s-technical-features .container .content__banner{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
     gap: 2rem;
     align-items: center;
     justify-content: center;
@@ -235,133 +304,44 @@ header .container .banner-hero__info p{
     display: grid;
     gap:1rem;
 }
-.s-technical-features .container .content__banner .content_text h2,h3,p{
-    font-weight: 500;
-}
+
 .s-technical-features .container .content_features{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 .s-technical-features .container .content_features .features{
-    padding: 2rem 1rem;
+    padding: 2.4rem;
     border-radius: .8rem;
     box-shadow: 0px 1.25rem 40px -11px var(--brand-color2);
     background-image: var(--bg-gradient);
 }
 .s-technical-features .container .content_features .features h3{
-    font-size: 140%;
     color: #FFFFFF;
-}
-.s-technical-features .container .content_features .features h3::before{
-    content: counter(num);
-    counter-increment: num;
-    font-weight: 700;
-    font-size: 140%;
-    color: #FFFFFF;
-    margin-right: .8rem;
 }
 .s-technical-features .container .content_features .features p{
     color: #FFFFFF;
     font-weight: 400;
-    font-size: 90%;
-}
-
-.s-recommends .container .content_recommends_users{
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    justify-items: center;
-}
-.s-recommends .container .content_recommends_users video{
-    width:100%;
-    max-width: fit-content;
-    height: 440px;
-    object-fit: contain;
-    border-radius: 1rem;
-}
-.s-recommends .container .content_title h2{
-    text-align: center;
+    font-size: 1.6rem;
 }
 
 .s-offer{
     background-image: var(--bg-gradient);
 }
-.s-offer .container .content_title {
-    max-width: 80vw;
-}
-.s-offer .container .content_title h2{
-    text-align: center;
-    color: #FFFFFF;
-}
-.s-offer .container .content_title h3{
-    text-align: center;
-    color: #FFFFFF;
-}
-.s-offer .container .content_title p{
-    text-align: center;
-    color: #FFFFFF;
-    font-weight: 400;
-}
 .s-offer .container .content_product {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 4rem;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
     align-items: center;
+    margin-top: 3.2rem;
+    margin-bottom: 3.2rem;
 }
 
-.s-offer .container .content_product .product_image {
-    display: grid;
-    justify-content: center;
-}
-.s-offer .container .content_product .product_image img{
+.s-offer .container .content_product img{
     object-fit: contain;
-    max-width: 60vw;
-}
-
-.s-offer .container .product_info span{
-    color: #FFFFFF;
-    display: block;
-}
-.s-offer .container .product_info .preco_old{
-    font-size: 120%;
-}
-.s-offer .container .product_info .preco_old s{
-    color: #FFFFFF;
-    text-decoration: line-through .15rem;
-}
-.s-offer .container .product_info .preco{
-    font-size: 290%;
-    font-weight: 700;
-}
-.s-offer .container .product_info .preco_vista{
-    font-size: 140%;
-    font-weight: 600;
-}
-.s-offer .container .product_info p{
-    color: #FFFFFF;
-    display: block;
-}
-.s-offer .container .product_info button{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-.s-offer .container .product_info button small{
-    color: #FFFFFF;
-    font-weight: 400;
-    font-size: 60%;
-}
-.s-offer .container .product_info button small b{
-    color: #FFFFFF;
-    font-weight: 600;
-    font-size: 120%;
-}
-.s-offer .container .content_product_info p{
-    color: #FFFFFF;
-    font-weight: 400;
-    text-align: center;
-    max-width: 80vw;
+    max-width: max-content;
+    height: 281px;
 }
 
 .s-faq .container .content__faq{
@@ -369,41 +349,44 @@ header .container .banner-hero__info p{
     max-width: 960px;
 }
 .s-faq .container h2{
-    color: var(--brand-color2);
+    color: #3080ed;
 }
 .s-faq .container h2::before{
     content: 'contact_support';
-    color: var(--brand-color2);
+    color: #3080ed;
     font-family: 'Material Icons';
     font-size: 4rem;
     margin-right: 1rem;
     vertical-align: middle;
 }
 .s-faq .container .content__faq details{
-    margin-bottom: 1rem;
+    margin-bottom: 2.4rem;
 }
 .s-faq .container .content__faq details p{
     padding: 1rem 2rem;
 }
 .s-faq .container .content__faq summary{
     color: #ffffff;
-    padding: 1rem 2rem;
-    border-radius: .6rem;
+    padding: 2.4rem 2rem;
+    border-radius: .8rem;
     background-image: var(--bg-gradient);
     font-size: ;
     font-weight: 600;
     line-height: 2.5rem;
     box-shadow: 0px .6rem 20px -11px var(--brand-color2);
+    cursor: pointer;
 }
 
 .s-faq .container .content__faq summary::before{
-    content: 'help';
+    content: '\e837';
     color: #ffffff;
     font-family: 'Material Icons';
-    font-size: 2rem;
+    font-weight: 400;
+    font-size: 2.4rem;
     margin-right: 1rem;
     vertical-align: middle;
 }
+
 .s-suport .container p{
     text-align: center;
 }
@@ -411,22 +394,68 @@ header .container .banner-hero__info p{
     background-image: var(--bg-gradient);
     box-shadow: 0px 1.25rem 40px -11px var(--brand-color2);
 }
-footer{
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-    background-image: var(--bg-gradient);
+
+footer .whatsapp img{
+    display: block;
+    width: 6.4rem;
+    height: 6.4rem;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
 }
-footer hr{
-    color: #FFFFFF;
+footer {
+    background: var(--bg-gradient);
+    padding-top: 6.4rem;
+    padding-bottom: 3.2rem;
 }
-footer .container p{
-    white-space: pre-line;
+footer p{
     text-align: center;
-    color: #FFFFFF;
-    font-weight: 400;
+    color: #FFF;
+    font-size: 1.4rem;
 }
-footer .container a{
-    color: #FFFFFF;
-    font-weight: 600;
+footer nav{
+    display: grid;
+    max-width: 960px;
+    justify-self: center;
+}
+footer ul{
+    display: flex;
+    gap: 2rem;
+}
+footer a{
+    text-align: center;
+    color: #FFF;
+    font-size: 1.4rem;
     text-decoration: underline;
+}
+
+.scroll::-webkit-scrollbar {
+    width: .8rem;
+    height: .8rem;
+}
+.scroll::-webkit-scrollbar-track {
+    background:transparent;
+}
+.scroll::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+/* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
+   e 10px de altura para a barra horizontal */
+::-webkit-scrollbar {
+    width:.8rem;
+    height: .8rem;
+    border-radius:6rem;
+
+}
+/* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
+    ::-webkit-scrollbar-track {
+    background:#E8E8E8;
+    border-radius:6rem;
+}
+ /* aqui é a alça da barra, que demonstra a altura que você está na página
+    estou colocando uma cor azul clara nela*/
+    ::-webkit-scrollbar-thumb {
+    background: var(--attention-green);
+      border-radius:6rem;
+      
 }
